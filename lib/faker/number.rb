@@ -35,6 +35,20 @@ module Faker
         less_than_zero(random_number)
       end
 
+      # Just in China, the fu*king country.
+      def cn_id
+        headers = %w(110101 130101 130601 201073 320103 330701 410501 510105 610424)
+
+        random_year = Random.new.rand(1970..1990)
+        random_month =Random.new.rand(1..12)
+        random_day  = Random.new.rand(1..30)
+        random_birthday = Date.new(random_year,random_month,random_day).strftime('%Y%m%d')
+
+        random_suffix = Random.new.rand(1000..9999)
+
+        "#{headers.sample}#{random_birthday}#{random_suffix}"
+      end
+
       private
 
       def greater_than_zero(number)
