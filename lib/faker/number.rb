@@ -41,7 +41,7 @@ module Faker
 
         random_year = Random.new.rand(1970..1990)
         random_month =Random.new.rand(1..12)
-        random_day  = Random.new.rand(1..30)
+        random_day  = Random.new.rand(1..28)
         random_birthday = ::Date.new(random_year,random_month,random_day).strftime('%Y%m%d')
 
         random_suffix = Random.new.rand(1000..9999)
