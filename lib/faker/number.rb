@@ -1,4 +1,6 @@
 module Faker
+  require 'date'
+
   class Number < Base
     class << self
       def number(digits)
